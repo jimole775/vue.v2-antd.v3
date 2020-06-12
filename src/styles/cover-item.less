@@ -1,0 +1,125 @@
+// @import "./index";
+
+// 所有按钮
+.ant-layout .main-content button[type='button'],
+.ant-layout .main-content .ant-btn-primary {
+  min-width: 7.14rem;
+  height: 2.85rem;
+}
+
+// 所有输入框
+.ant-input,
+.ant-select-selection.ant-select-selection--single {
+  height: 2.85rem;
+}
+
+// 所有输入框，增加层级权重
+.table-page-search-wrapper .ant-form-inline .ant-form-item .ant-form-item-control .ant-input,
+.table-page-search-wrapper .ant-form-inline .ant-form-item .ant-form-item-control .ant-select-selection--single {
+  height: 2.85rem;
+}
+
+// 单独处理翻页组件的下拉框
+.ant-pagination.ant-table-pagination {
+
+  li.ant-pagination-total-text,
+  li.ant-pagination-options,
+  div.ant-select-selection.ant-select-selection--single,
+  div.ant-select-selection__rendered {
+    line-height: 32px;
+    height: 32px;
+  }
+}
+
+// 所有ant表格单元，都设置为relative
+// 使其内部元素可以使用position进行布局
+.ant-table .ant-table-content .ant-table-thead>tr>th,
+.ant-table .ant-table-content .ant-table-tbody>tr>td {
+  position: relative;
+  padding: 0.5rem 8px;
+  height: 55px;
+  word-break: break-all;
+}
+
+// .ant-table .ant-table-content .ant-table-tbody>tr>td {
+// margin-left: -1px;
+// padding: 0.5rem 7.5px;
+// }
+
+.ant-table .ant-table-content .ant-table-placeholder .ant-empty.ant-empty-normal .ant-empty-image {
+  background: url('../assets/pic_Nodata.png') no-repeat top center / auto 100%;
+  height: 70px;
+
+  img {
+    opacity: 0;
+  }
+}
+
+
+// 所有ant表头，默认字体颜色都改为 #7C7B80
+.ant-table .ant-table-content .ant-table-thead>tr>th {
+  color: @tableHeadColor;
+}
+
+// 左边栏的icon字体大小
+i.menu-icon-style {
+  font-size: 1.5rem;
+}
+
+// 用于处理所有下拉框无法对齐的情况
+div.ant-select-selection__rendered {
+  line-height: 2.85rem;
+}
+
+
+// // 社会调查报告单元树头部表单下拉框的样式
+// .ant-select-selection.ant-select-selection--single{
+//   div.ant-select-selection__rendered {
+//     line-height: 32px;
+//   }
+// }
+
+// 左边栏背景色需要改为 #00CF61
+ul.ant-menu.ant-menu-inline.ant-menu-root.ant-menu-dark {
+  li.ant-menu-item.ant-menu-item-selected {
+    background-color: #00CF61;
+  }
+}
+
+// 全局 a 标签颜色替换
+html {
+  a {
+    color: #00B627;
+  }
+}
+
+// 普通输入框的清除按钮需要隐藏，hover的时候才显示
+span.ant-input-affix-wrapper {
+  span.ant-input-suffix {
+    display: none;
+
+    svg {
+      color: rgb(217, 217, 217);
+
+      &:hover {
+        color: rgb(156, 156, 156)
+      }
+    }
+  }
+
+  &:hover {
+    span.ant-input-suffix {
+      display: block;
+    }
+  }
+}
+
+// ant-input 需要覆盖字体大小
+input.ant-input {
+  font-size: 1rem;
+}
+
+// 表格无数据时，不显示下边框
+div.ant-table-placeholder {
+  border-bottom: 0;
+}
